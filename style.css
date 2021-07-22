@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Zen+Loop:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+body{
+    background-color: cadetblue !important;
+    font-family: 'Zen Loop', cursive;
+    margin: 0;
+}
+
+#landing{
+    background-image: url('https://picsum.photos/id/135/2560/1920');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    text-align: left;
+    padding-top: 30vh;
+    padding-left: 7vw;
+    position: relative;
+}
+
+#landing h1{
+    text-transform: uppercase;
+    font-size: 70px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+#landing nav{
+    padding-right: 3vw;
+    text-align: end;
+    position: absolute;
+    top:4%;
+    right: 3%;
+}
+nav img.icon{
+    max-width: 30px;
+}
+
+#landing h1 > span.country{
+    color: green;
+}
+
+#landing h1 > span.jobTitle{
+    text-decoration: underline;
+}
+
+em, p{
+    color: honeydew;
+    font-size: 30px;
+}
+
+#about{
+    padding: 60px 20px;
+    height: 50vh;
+    font-family: 'Montserrat', sans-serif;
+}
+#about .iconRow{
+    display: flex;
+   
+}
+
+#about .iconRow .single{
+    width: 25%;
+    justify-content: center;
+    text-align: center;
+}
+
+#about .texts{
+    display: flex;
+    padding-top: 10px;
+    padding-left: 14%;
+    align-items: center;
+}
+
+#about .texts div{
+    width: 40%;
+}
+
+#about .texts div h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: xx-large;
+    text-align: end;
+    margin-right: 20px;
+}
+
+#about .texts div p{
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.single:nth-child(2) img{
+    margin-top: 20px;
+    width: 15% !important;
+}
+
+#skillSet{
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#skillSet div{
+    margin: 5%;
+}
+
+#skillSet img{
+    max-width: 100px !important;
+    filter: drop-shadow(0 0 0.75rem rgb(127, 138, 233));
+}
+
+section#about + h2, #lastSection h2 {
+    margin-left: 5vw;
+    font-family: 'Otomanopee One', sans-serif;
+    color: rgba(255, 248, 220, 0.692);
+    font-size: xx-large;
+}
+
+#lastSection h2 a{
+    padding: 30px 20px 0 20px;
+    background-color: darkgrey;
+    border: 4px solid #0000 !important;
+    font-family: 'Otomanopee One', sans-serif;
+    font-size: xx-large;
+    color: #ffff;
+}
