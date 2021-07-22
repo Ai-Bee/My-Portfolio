@@ -96,6 +96,7 @@ em, p{
     margin-top: 0;
     display: flex;
     flex-wrap: wrap;
+    padding-left: 5vw;
 }
 
 #skillSet div{
@@ -105,7 +106,12 @@ em, p{
 #skillSet img{
     max-width: 100px !important;
     filter: drop-shadow(0 0 0.75rem rgb(127, 138, 233));
+    transition: all 2s ease-out;
 }
+
+/* #skillSet img::hover{
+    max-width: 120px !important;
+} */
 
 section#about + h2, #lastSection h2 {
     margin-left: 5vw;
@@ -121,4 +127,20 @@ section#about + h2, #lastSection h2 {
     font-family: 'Otomanopee One', sans-serif;
     font-size: xx-large;
     color: #ffff;
+}
+
+footer{
+    display: flex;
+    background-color: rgb(52, 95, 97);
+    height: 60px;
+    position: sticky;
+    padding-top: 10px;
+}
+
+footer div a {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+footer a > img{
+    max-width: 50% !important;
 }
