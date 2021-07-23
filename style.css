@@ -120,6 +120,55 @@ section#about + h2, #lastSection h2 {
     font-size: xx-large;
 }
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #6ea1e4d8;
+    margin: 5%;
+    padding: 20px;
+    border: 2px solid rgb(66, 66, 66);
+    height: 100%;
+    text-align: center;
+    font-family: 'Otomanopee One', sans-serif;
+    font-size: xx-large;
+  }
+  
+  .modal-content a{
+      text-decoration: none;
+      transition: all 1s ease-out;
+  }
+
+  .modal-content a:hover{
+    text-decoration: underline;
+}
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 #lastSection h2 a{
     padding: 30px 20px 0 20px;
     background-color: darkgrey;
