@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Zen+Loop:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap');
+html { 
+    scroll-behavior: smooth; 
+  } 
+
 body{
     background-color: cadetblue !important;
     font-family: 'Zen Loop', cursive;
@@ -24,17 +28,89 @@ body{
     margin-top: 10px;
     margin-bottom: 7px;
 }
-#landing nav{
-    padding-right: 3vw;
-    text-align: end;
-    position: absolute;
-    top:4%;
-    right: 3%;
-}
-nav img.icon{
-    max-width: 30px;
+
+li img.icon{
+    display: none;
 }
 
+#landing p:first-of-type{
+    font-family: monospace;
+    overflow: hidden;
+    letter-spacing: 2px;
+   animation: typing 5s steps(10, end), blink .75s step-end infinite;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: 400;
+  border-right: 2px solid orange;
+  box-sizing: border-box;
+}
+
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 100% 
+    }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: rgb(0, 132, 255); 
+    }
+}
+
+ul.theNav {
+    list-style-type: none;
+    position: fixed; 
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    overflow: hidden;
+    z-index: 20;
+    background-color:cadetblue;
+    width: 100vw;
+    border-bottom: 1px solid rgb(144, 168, 144);
+  }
+  
+ul.theNav li {
+    float: left;
+   
+  }
+
+  ul.theNav button{
+    background-color: transparent;
+      border: none;
+      outline: none;
+      transition: all .5s ease-out;
+  }
+  ul.theNav button:hover{
+    background-color: rgb(132, 161, 223);
+  }
+ul.theNav li a {
+    display: block;
+    font-size: 30px;
+    font-family: 'Zen Loop', cursive;
+    color: rgb(36, 37, 39);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  ul.theNav li a:hover{
+      color: thistle;
+  } 
+  ul.theNav img {
+      max-width: 30px;
+  }
+
+  ul.theNav li:last-of-type{
+     left: 94vw;
+     top: 10px;
+      position: absolute;
+  }
 #landing h1 > span.country{
     color: green;
 }
@@ -193,3 +269,28 @@ footer div a {
 footer a > img{
     max-width: 50% !important;
 }
+
+#backToTop{
+    position: fixed;
+    outline: none;
+    border:none;
+    border-radius: 50%;
+    top: 85vh;
+    left:90vw;
+    padding: 20px;
+    cursor: pointer;
+    transition: all .1s ease-in;
+}
+
+#backToTop:hover{
+    background-color: teal;
+}
+
+@media only screen and (max-width: 425px) {
+    ul.theNav li.lg {
+        display: none;
+       }
+    li img.icon{
+        display: block;
+    }
+  }

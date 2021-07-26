@@ -10,12 +10,21 @@
 </head>
 <body>
     <div class="myContainer">
-        <nav style="float: right; padding-right: 5vw; padding-top: 2vh;">
-            <img src='./images/menu.png' id="myBtn" alt="Menu Icon" class="icon"/>
-        </nav>
+        <ul class="theNav">
+            <li class="lg"><button><a  href="/index.html">Home</a></button></li>
+            <li class="lg"><button><a href="/contactPage.html">Contact</a></button></li>
+            <li class="lg"><button><a href="/works.html">Projects</a></button></li>
+            <li class="lg"><button><a href="/about.html">About</a></button></li>
+            <li style="float:right"> <img src='./images/menu.png' id="myBtn" alt="Menu Icon" class="icon"/></li>
+        </ul>
     <div id="myModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
+          <a href="/index.html">
+            <h1>
+                Home
+            </h1>
+        </a>
           <a href="/contactPage.html">
             <h1>
                 Contact Me
@@ -34,6 +43,9 @@
         </div>
       
       </div>
+      <button id="backToTop" title="Back to top">
+        <img src="./images/up-arrow.png" alt="Up Arrow">
+    </button>
     </div>
     <script src="myscripts.js"></script>
 </body>

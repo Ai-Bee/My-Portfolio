@@ -7,9 +7,21 @@
 </head>
 <body>
 <div class="myContainer">
+    <ul class="theNav">
+        <li class="lg"><button><a  href="/index.html">Home</a></button></li>
+        <li class="lg"><button><a href="/contactPage.html">Contact</a></button></li>
+        <li class="lg"><button><a href="/works.html">Projects</a></button></li>
+        <li class="lg"><button><a href="/about.html">About</a></button></li>
+        <li style="float:right"> <img src='./images/menu.png' id="myBtn" alt="Menu Icon" class="icon"/></li>
+    </ul>
     <div id="myModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
+          <a href="/index.html">
+            <h1>
+                Home
+            </h1>
+        </a>
           <a href="/contactPage.html">
             <h1>
                 Contact Me
@@ -29,12 +41,9 @@
       
       </div>
     <section id='landing'>
-        <nav>
-            <img src='./images/menu.png' id="myBtn" alt="Menu Icon" class="icon"/>
-        </nav>
-        <em>Oh hey there, nice to meet you</em>
+        <p>Oh hey there, nice to meet you</p>
         <h1>I'm a <span class="jobTitle">Software Developer </span><br> from <span class="country">Nigeria</span></h1>
-        <p>Let the adventure begin...</p>
+        <em>Let the adventure begin...</em>
     </section>
     <section id='about'>
         <div class="iconRow">
@@ -114,6 +123,9 @@
             <a href="https://github.com/Ai-Bee"> <img src="./images/github-logo.png" alt="Github"/> </a>
         </div>
     </footer>
+    <button id="backToTop" title="Back to top">
+        <img src="./images/up-arrow.png" alt="Up Arrow">
+    </button>
 </div>
 <script src="myscripts.js"></script>
 </body>
