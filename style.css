@@ -15,7 +15,7 @@ body{
     background-image: url('https://picsum.photos/id/135/2560/1920');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 70vh;
     text-align: left;
     padding-top: 30vh;
     padding-left: 7vw;
@@ -30,7 +30,7 @@ body{
 }
 
 li img.icon{
-    display: none;
+    opacity: 0;
 }
 
 #landing p:first-of-type{
@@ -181,13 +181,14 @@ em, p{
 
 #skillSet img{
     max-width: 100px !important;
-    filter: drop-shadow(0 0 0.75rem rgb(127, 138, 233));
-    transition: all 2s ease-out;
+    filter: drop-shadow(0 0 0.75rem rgb(166, 171, 219));
+    transition: all .2s ease-out;
 }
 
 /* #skillSet img::hover{
-    max-width: 120px !important;
-} */
+    background-color: rebeccapurple;
+    transform: scale(1.1);
+}  */
 
 section#about + h2, #lastSection h2 {
     margin-left: 5vw;
@@ -279,18 +280,109 @@ footer a > img{
     left:90vw;
     padding: 20px;
     cursor: pointer;
-    transition: all .1s ease-in;
+    z-index: 100;
+    /* hide with opacity */
+    /* opacity: 0;
+    transform: translateY(100px);
+    transition: all .5s ease;
+    transition: all .1s ease-in; */
 }
+
+.scrollToTopBtn {
+    background-color: black;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 48px;
+    width: 48px;
+    
+    /* place it at the bottom right corner */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    /* keep it at the top of everything else */
+    z-index: 100;
+    /* hide with opacity */
+    opacity: 0;
+    /* also add a translate effect */
+    transform: translateY(100px);
+    /* and a transition */
+    transition: all .5s ease
+  }
+
+.showBtn {
+    opacity: 1;
+    transform: translateY(0)
+  }
 
 #backToTop:hover{
     background-color: teal;
 }
 
+
+@media only screen and (max-width: 768px) {
+    section#landing{
+        max-height: 47vh !important;
+        padding-top: 14vh;
+    }
+
+    #about {
+        padding: 43px 0;
+        height: auto;
+    }
+    #about .texts div {
+        width: 82%;
+    }
+    #about .texts {
+       
+        padding-left: 0;
+        flex-direction: column;
+        justify-content: space-evenly;
+  }
+}
 @media only screen and (max-width: 425px) {
     ul.theNav li.lg {
         display: none;
        }
     li img.icon{
-        display: block;
+        opacity: 1;
+    }
+    ul.theNav li:last-of-type {
+        left: 88vw;
+        position: fixed;
+    }
+    .modal-content {
+        text-align: left;
+        font-size: 22px;
+      }
+    #landing h1{
+        font-size: 30px;
+    }
+    #about .iconRow {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+    #about .iconRow .single {
+        width: 57%;
+    }  
+    #skillSet{
+        flex-wrap: wrap;
+        padding-left: 0;
+        justify-content: space-around;
+    }
+    section#lastSection h2{
+        font-size: 20px;
+    }
+    #lastSection h2 a {
+        padding: 0;
+       font-size: inherit;
+    }
+    #backToTop{
+        width: 38px;
+        height: 40px;
+        padding: 5px;
     }
   }
