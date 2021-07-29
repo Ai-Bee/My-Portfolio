@@ -273,6 +273,57 @@ section#about + h2, #lastSection h2 {
     color: #ffff;
 }
 
+#contactPageForm{
+    display: relative;
+    margin-left: 5em;
+}
+
+#contactPageForm input[type=text], input[type=email], textarea {
+    width: 60vw; 
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  #contactPageForm textarea{
+      margin-left: 5em;
+  }
+  /* Style the submit button with a specific background color etc */
+  button[type=submit] {
+    background-color: #4560d8;
+    color: white;
+    width: 20%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5em;
+    cursor: pointer;
+    transition: all 0.9s ease-in;
+  }
+  button[type=submit]:hover{
+      color: #4560d8;
+      background-color: white;
+  }
+  label{
+      font-size: x-large;
+  }
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  .contacts{
+      font-size: x-large;
+      margin-top: 1em;
+      margin-left: 6em;
+  }
+
+  .contacts img{
+      max-width: 30% !important;
+  }
 footer{
     display: flex;
     background-color: rgb(52, 95, 97);
@@ -366,6 +417,13 @@ footer a > img{
 
 }
 @media only screen and (max-width: 425px) {
+    #contactPageForm{
+        margin-left: 1em;
+    }
+.contacts {
+    margin-left: 3.5em;
+    margin-bottom: 3em;
+}
     ul.theNav li.lg {
         display: none;
        }
